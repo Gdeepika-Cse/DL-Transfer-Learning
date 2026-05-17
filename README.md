@@ -7,7 +7,6 @@ To develop an image classification model using transfer learning with VGG19 arch
 
 ## Problem Statement and Dataset
 Transfer Learning is a technique where a pre-trained model (trained on a large dataset such as ImageNet) is used as a starting point for a different but related task. It leverages learned features from the original task to improve learning efficiency and performance on the new task.
-
 VGG19 is a convolutional neural network with 19 layers. It consists of multiple convolutional layers for feature extraction, followed by fully connected layers for classification. In transfer learning, we typically freeze the convolutional layers and retrain the final fully connected layers to match our dataset.
 
 ## Neural Network Model
@@ -36,9 +35,7 @@ Evaluate the model with test accuracy, confusion matrix, classification report, 
 ## PROGRAM
 
 ### Name: DEEPIKA G
-
 ### Register Number: 212224040060
-
 ```python
 # Load Pretrained Model and Modify for Transfer Learning
 # Load a pre-trained VGG19 model
@@ -46,16 +43,13 @@ Evaluate the model with test accuracy, confusion matrix, classification report, 
 from torchvision.models import VGG19_Weights
 model =models.vgg19(weights=VGG19_Weights.DEFAULT)
 
-
 # Modify the final fully connected layer to match the dataset classes
 # Write your code here
 model.classifier[-1]=nn.Linear(model.classifier[-1].in_features,1)
 
-
 # Include the Loss function and optimizer
 criterion =nn.BCEWithLogitsLoss()
 optimizer =optim.Adam(model.parameters(), lr=0.001)
-
 
 # Train the model
 def train_model(model, train_loader, test_loader,num_epochs=100):
