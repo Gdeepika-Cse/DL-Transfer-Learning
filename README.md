@@ -11,7 +11,8 @@ Transfer Learning is a technique where a pre-trained model (trained on a large d
 VGG19 is a convolutional neural network with 19 layers. It consists of multiple convolutional layers for feature extraction, followed by fully connected layers for classification. In transfer learning, we typically freeze the convolutional layers and retrain the final fully connected layers to match our dataset.
 
 ## Neural Network Model
-Include the neural network model diagram.
+
+<img width="1043" height="802" alt="592412633-c67d64fe-6d90-46b2-84b2-84a9bf1d77e0" src="https://github.com/user-attachments/assets/c23233bd-3a30-45fd-b6ea-a7f1c8a9f79b" />
 
 ## DESIGN STEPS
 # STEP 1:
